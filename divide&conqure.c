@@ -4,7 +4,9 @@
 int bs(int arr[],int l, int r,int x);
 int main()
 {
+	clock_t begin = clock();
 	int a[100],n,x,i;
+	double time_spent=0.0;
 	printf("Enter the size of the array: ");
 	scanf("%d",&n);
 	printf("Enter %d elements into the array: ",n);
@@ -19,6 +21,9 @@ int main()
 		printf("Element is not present in the array");
 	else
 		printf("Element is present in the array");
+	clock_t end = clock();
+	time_spent += (double)(end-begin) / CLOCKS_PER_SEC;	
+	printf("\nTotal runtime of the program is :%f",time_spent);
 }
 int bs(int arr[],int l, int r,int x)
 {
