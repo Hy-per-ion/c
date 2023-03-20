@@ -23,7 +23,7 @@ int main()
 		printf("Element is present in the array");
 	clock_t end = clock();
 	time_spent += (double)(end-begin) / CLOCKS_PER_SEC;	
-	printf("\nTotal runtime of the program is :%f",time_spent);
+	printf("\nTotal runtime of the program is :%f\n",time_spent);
 }
 int bs(int arr[],int l, int r,int x)
 {
